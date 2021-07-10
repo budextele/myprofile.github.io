@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FCA311;
+}
+
+/*bnner & h1*/
+.banner {
+    background: url("image/banner.jpg") no-repeat;
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #14213D;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.artikel {
+    text-align: center;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+span:before {
+    content: '';
+    animation: animate infinite 8s;
+}
+
+@keyframes animate {
+    0% {
+        content: 'Budi Utomo';
+    }
+
+    50% {
+        content: 'Web Developer';
+    }
+
+    100% {
+        content: 'System Integrator';
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        width: min-content;
+    }
+
+}
+
+/*   banner & h1   */
+
+footer {
+    /*memberikan efek pada footer*/
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav a {
+    /*mengatur nav pada tag a*/
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav {
+    /*untuk memberikan efek pada elemen navigation*/
+    background-color: black;
+    padding: 5px;
+    margin-bottom: 0px;
+    /*membuat navigasi dapat melekat pada jendela browser (layaknya fixed position) tetapi posisi awalnya tetap menempati posisi di mana ia seharusnya berada (layaknya relative position)*/
+    position: sticky;
+    top: 0;
+}
+
+nav a:hover {
+    /*memberikan efek cursor pada link*/
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+header {
+    /*Bagaimana agar navigasi dapat menempel pada seluruh halaman? Buat elemen <header> sebagai induk dari elemen <nav> yang menerapkan properti display dengan nilai inline*/
+    display: inline;
+}
+
+
+
+
+
+* {
+    /*menentukan dimensi kotak dengan tepat, tanpa dipengaruhi oleh padding dan border.*/
+    box-sizing: border-box;
+}
+
+.profile {
+    max-width: 200px;
+}
+
+.project-image {
+    max-width: 800%;
+}
+
+
+
+main {
+    /*menjadikan elemen main jadi overflow*/
+    padding: 20px;
+    overflow: auto;
+}
+
+
+
+#content {
+    /*mengeluarkan elemen main ke luar flow dan ditempakan di kiri selebar 75%*/
+    float: left;
+    width: 50%;
+    margin-bottom: -200px;
+}
+
+#hobby,
+#project {
+    /*mengeluarkan elemen main ke luar flow dan ditempakan di kiri selebar 75%*/
+
+    width: 190%;
+}
+
+@media screen and (max-width: 1024px) {
+
+    #hobby,
+    #project,
+    #about {
+        width: 90%;
+        padding: 0;
+    }
+
+
+}
+
+.card p {
+    text-align: justify;
+    padding: 10px;
+}
+
+.space {
+    margin-bottom: 30px;
+}
+
+h2 {
+    padding: 20px 0px;
+}
+
+.card {
+    /*memberikan efek kotak pada tiap2 artikle*/
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.66);
+    border-radius: 5px;
+    /*tambahan sendiri*/
+    padding: 20px;
+    margin: 20px 0px 20px 20px;
+    background-color: whitesmoke;
+}
+
+
+
+
+aside {
+    /*mengeluarkan elemen aside ke luar flow dan ditempakan di kanan selebar 25%*/
+    float: right;
+    width: 40%;
+    padding-left: 20px;
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/*project slide show*/
+
+.img-slider {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    background: transparent;
+
+
+}
+
+.tes {
+    margin-bottom: 300px;
+}
+
+.img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+
+.img-slider .slide img {
+    z-index: 1;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.img-slider .slide .info {
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+
+.img-slider .slide .info h3 {
+    color: #fff;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.img-slider .slide .info p {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.img-slider .navigation {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.img-slider .navigation .btn {
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.img-slider .navigation .btn.active {
+    background: #2696E9;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1025px) {
+
+
+    .img-slider {
+        width: 600px;
+        height: 375px;
+
+    }
+
+    .img-slider .slide .info {
+        padding: 10px 25px;
+
+    }
+
+    .img-slider .slide .info h3 {
+        font-size: 35px;
+    }
+
+    .img-slider .slide .info p {
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .img-slider .navigation {
+        bottom: 125px;
+    }
+
+    .img-slider .navigation .btn {
+        width: 10px;
+        height: 10px;
+        margin: 8px;
+    }
+
+    .tes {
+        padding-bottom: 500px;
+    }
+}
+
+@media (max-width: 736px) {
+    .img-slider {
+        width: 400px;
+        height: 250px;
+    }
+
+    .img-slider .slide .info {
+        padding: 10px 20px;
+    }
+
+    .img-slider .slide .info h3 {
+        font-size: 30px;
+    }
+
+    .img-slider .slide .info p {
+        width: 80%;
+        font-size: 13px;
+    }
+
+    .img-slider .navigation {
+        bottom: 50px;
+    }
+
+    .img-slider .navigation .btn {
+        width: 8px;
+        height: 8px;
+        margin: 6px;
+    }
+
+    .tes {
+        padding-bottom: 300px;
+    }
+}
+
+@media (max-width: 520px) {
+    .img-slider {
+        width: 320px;
+        height: 200px;
+    }
+
+    .img-slider .slide .info {
+        padding: 5px 10px;
+    }
+
+    .img-slider .slide .info h3 {
+        font-size: 25px;
+    }
+
+    .img-slider .slide .info p {
+        width: 90%;
+        font-size: 11px;
+    }
+
+    .img-slider .navigation {
+        bottom: 90px;
+    }
+
+    .tes {
+        padding-bottom: 280px;
+    }
+}
+
+@media (max-width: 410px) {
+    .img-slider {
+        width: 280px;
+        height: 160px;
+    }
+
+    .img-slider .slide .info {
+        padding: 5px 10px;
+    }
+
+    .img-slider .slide .info h3 {
+        font-size: 25px;
+    }
+
+    .img-slider .slide .info p {
+        width: 90%;
+        font-size: 11px;
+    }
+
+    .img-slider .navigation {
+        bottom: 30px;
+    }
+
+    .tes {
+        padding-bottom: 200px;
+    }
+}
+
+/*project slide show*/
+
+
+/*box 3*/
+
+
+.outer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+
+}
+
+.box {
+    height: 200px;
+    color: black;
+    text-align: center;
+
+    position: relative;
+}
+
+.hobby-img {
+    max-width: 100%;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .hobby-img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 786px) {
+
+    .hobby-img {
+        width: 50%;
+    }
+}
+
+.sosmed {
+    max-width: 30px;
+    padding: 5px;
+    box-sizing: content-box;
+    margin-right: 30px;
+
+}
